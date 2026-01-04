@@ -20,15 +20,18 @@ const EditBlog = () => {
 
   const getSingleBlog = async () => {
     try {
-      const { data } = await axios.get(`${backendUrl}/api/blog/getBlog/${blogId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const { data } = await axios.get(
+        `${backendUrl}/api/blog/getBlog/${blogId}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       if (data.success) {
         setTitle(data.blogData.title);
         setDescription(data.blogData.description);
         setCategory(data.blogData.category);
-        setBlogImg(data.blogData.image)
+        setBlogImg(data.blogData.image);
       } else {
         toast.error(data.message);
       }
@@ -64,6 +67,7 @@ const EditBlog = () => {
         toast.success(data.message);
         setDisable(false);
         navigate("/profile");
+        scrollTo(0, 0);
         getAllBlogs();
       } else {
         toast.error(data.message);
@@ -75,7 +79,6 @@ const EditBlog = () => {
     }
   };
 
-  
   return (
     <form
       onSubmit={(e) => {

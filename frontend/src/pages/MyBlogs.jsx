@@ -67,7 +67,10 @@ const MyBlogs = () => {
           className="border rounded-lg overflow-hidden bg-white transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
         >
           <img
-            onClick={() => navigate(`/blog/${item._id}`)}
+            onClick={() => {
+              navigate(`/blog/${item._id}`);
+              scrollTo(0, 0);
+            }}
             className="w-full h-48 object-cover cursor-pointer"
             src={item.image}
             alt={item.title}
@@ -75,7 +78,10 @@ const MyBlogs = () => {
 
           <div
             className="flex items-center m-3"
-            onClick={() => navigate(`/blog/${item._id}`)}
+            onClick={() => {
+              navigate(`/blog/${item._id}`);
+              scrollTo(0, 0);
+            }}
           >
             <p className="px-1.5 py-1 rounded-sm bg-black text-white text-[10px] cursor-pointer">
               {item.category}
@@ -83,7 +89,10 @@ const MyBlogs = () => {
           </div>
 
           <div
-            onClick={() => navigate(`/blog/${item._id}`)}
+            onClick={() => {
+              navigate(`/blog/${item._id}`);
+              scrollTo(0, 0);
+            }}
             className="m-3 cursor-pointer flex-1"
           >
             <h2 className="text-base sm:text-lg font-semibold mb-3">
@@ -96,7 +105,10 @@ const MyBlogs = () => {
 
           <div className="flex justify-between items-center gap-2 px-3 pb-4 mt-auto">
             <button
-              onClick={() => navigate(`/blog/${item._id}`)}
+              onClick={() => {
+                navigate(`/blog/${item._id}`);
+                scrollTo(0, 0);
+              }}
               className="group flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold 
 bg-gray-100 text-gray-800 
 hover:bg-black hover:text-white 
@@ -110,7 +122,10 @@ transition-colors duration-200"
               />
             </button>
             <button
-              onClick={() => navigate(`/edit/${item._id}`)}
+              onClick={() => {
+                navigate(`/edit/${item._id}`);
+                scrollTo(0, 0);
+              }}
               className="px-4 py-2 rounded-full text-xs font-semibold 
 bg-blue-100 text-blue-700 
 hover:bg-blue-600 hover:text-white 

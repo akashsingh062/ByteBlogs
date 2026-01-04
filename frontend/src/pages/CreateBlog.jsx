@@ -8,13 +8,13 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const CreateBlog = () => {
-  const { token, backendUrl,getAllBlogs } = useContext(BlogContext);
+  const { token, backendUrl, getAllBlogs } = useContext(BlogContext);
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("Technology");
   const [description, setDescription] = useState("");
   const [blogImg, setBlogImg] = useState(false);
   const [disable, setDisable] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handelSubmit = async () => {
     try {
@@ -42,8 +42,9 @@ const CreateBlog = () => {
         setDescription("");
         setBlogImg(false);
         setDisable(false);
-        navigate('/profile')
-        getAllBlogs()
+        navigate("/profile");
+        scrollTo(0, 0);
+        getAllBlogs();
       } else {
         toast.error(data.message);
       }

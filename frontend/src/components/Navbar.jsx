@@ -8,13 +8,8 @@ import { toast } from "react-toastify";
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const {
-    userData,
-    setUserData,
-    token,
-    setToken,
-    getAllBlogs,
-  } = useContext(BlogContext);
+  const { userData, setUserData, token, setToken, getAllBlogs } =
+    useContext(BlogContext);
 
   const handelLogout = () => {
     if (token) {
@@ -22,8 +17,9 @@ const Navbar = () => {
       localStorage.removeItem("token");
       toast.success("User Logged out.");
       setUserData({});
-      getAllBlogs()
+      getAllBlogs();
       navigate("/");
+      scrollTo(0, 0);
     }
   };
 
@@ -31,22 +27,24 @@ const Navbar = () => {
     <div className="flex items-center justify-between px-5 md:px-20 mt-4">
       {/* Logo */}
       <div
-        onClick={() => navigate("/")}
+        onClick={() => {
+          navigate("/");
+          scrollTo(0, 0);
+        }}
         className="cursor-pointer bg-black px-4 py-2 rounded-xl flex items-center"
         aria-label="Go to home"
         role="button"
       >
-        <img
-          className="w-36 md:w-48"
-          src={assets.logo_light}
-          alt="logo"
-        />
+        <img className="w-36 md:w-48" src={assets.logo_light} alt="logo" />
       </div>
 
       {/* Right section */}
       {!token || !userData ? (
         <div
-          onClick={() => navigate("/login")}
+          onClick={() => {
+            navigate("/login");
+            scrollTo(0, 0);
+          }}
           className="flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer border bg-gray-100 text-gray-800 hover:bg-black hover:text-white transition-colors duration-200 group"
         >
           <p className="text-md font-medium">Get Started</p>
@@ -69,7 +67,10 @@ const Navbar = () => {
           />
           <div className="absolute right-0 top-16 w-44 bg-white text-gray-700 rounded-lg shadow-lg z-20 hidden group-hover:block">
             <p
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                scrollTo(0, 0);
+              }}
               className={`px-4 py-2 cursor-pointer text-sm ${
                 location.pathname === "/"
                   ? "bg-gray-100 font-semibold"
@@ -79,7 +80,10 @@ const Navbar = () => {
               Home
             </p>
             <p
-              onClick={() => navigate("/profile")}
+              onClick={() => {
+                navigate("/profile");
+                scrollTo(0, 0);
+              }}
               className={`px-4 py-2 cursor-pointer text-sm ${
                 location.pathname === "/profile"
                   ? "bg-gray-100 font-semibold"
@@ -89,7 +93,10 @@ const Navbar = () => {
               My Profile
             </p>
             <p
-              onClick={() => navigate("/new-blog")}
+              onClick={() => {
+                navigate("/new-blog");
+                scrollTo(0, 0);
+              }}
               className={`px-4 py-2 cursor-pointer text-sm ${
                 location.pathname === "/new-blog"
                   ? "bg-gray-100 font-semibold"

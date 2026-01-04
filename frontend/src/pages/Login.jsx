@@ -24,6 +24,7 @@ const Login = () => {
           setToken(data.token);
           toast.success(data.message);
           navigate("/");
+          scrollTo(0, 0);
         } else {
           toast.error(data.message);
         }
@@ -38,6 +39,7 @@ const Login = () => {
           setToken(data.token);
           toast.success(data.message);
           navigate("/");
+          scrollTo(0, 0);
         } else {
           toast.error(data.message);
         }

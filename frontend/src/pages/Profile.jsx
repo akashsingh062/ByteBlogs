@@ -4,7 +4,6 @@ import { assets } from "../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 import MyBlogs from "./MyBlogs";
-import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const { token, getUserData, userData, backendUrl } =
