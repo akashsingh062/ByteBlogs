@@ -9,7 +9,17 @@
   display: none;
 }
 
-/* ---------- Headings ---------- */
+.Toastify__toast {
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .Toastify__toast {
+    width: 90vw;
+    margin: auto;
+    border-radius: 12px;
+  }
+}
 
 #blog h1 {
   font-size: 2rem;

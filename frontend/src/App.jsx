@@ -10,11 +10,19 @@ import CreateBlog from "./pages/CreateBlog";
 import MyBlogs from "./pages/MyBlogs";
 import EditBlog from "./pages/EditBlog";
 
-
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <ToastContainer />
+      <ToastContainer
+  position="bottom-center"
+  autoClose={1000}
+  hideProgressBar
+  closeOnClick
+  pauseOnHover
+  draggable
+  theme="dark"
+  limit={2}
+/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,7 +31,6 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/new-blog" element={<CreateBlog />} />
         <Route path="/edit/:blogId" element={<EditBlog />} />
-
       </Routes>
       <Footer />
     </div>
