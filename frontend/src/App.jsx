@@ -15,7 +15,7 @@ const App = () => {
     <div className="min-h-screen flex flex-col">
       <ToastContainer
   position="bottom-center"
-  autoClose={1000}
+  autoClose={1200}
   hideProgressBar
   closeOnClick
   pauseOnHover
