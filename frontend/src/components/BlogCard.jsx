@@ -42,11 +42,7 @@ const BlogCard = () => {
           </div>
 
           <button
-            className="group flex items-center justify-center gap-2 mx-3 mb-4 px-4 py-2 rounded-full text-xs font-semibold
-bg-gray-100 text-gray-800
-hover:bg-black hover:text-white
-transition-colors duration-200"
-          >
+            className="group flex items-center justify-center gap-2 mx-3 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-gray-100 text-gray-800 hover:bg-black hover:text-white transition-colors duration-200">
             Read more
             <img
               className="w-3 h-3 transition-filter duration-200 group-hover:invert"

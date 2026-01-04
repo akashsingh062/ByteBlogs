@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import BlogCard from "./BlogCard.jsx";
 import { BlogContext } from "../context/BlogContext.jsx";

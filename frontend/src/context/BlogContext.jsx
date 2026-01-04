@@ -1,6 +1,4 @@
 import { createContext, useState } from "react";
-// import { blog_data as blogData } from "../assets/assets.js";
-import { useAsyncError } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
@@ -32,7 +30,7 @@ const BlogContextProvider = (props) => {
   const getAllBlogs = async ()=>{
     try {
       const {data} = await axios.get(backendUrl+'/api/blog/getBlogs',{headers:{Authorization:`Bearer ${token}`}})
-      setData(data.blogData.reverse())
+      setData(data.blogData)
     } catch (error) {
       toast.error(error.response?.data?.message || "Server error. Try again.");
       

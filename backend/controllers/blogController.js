@@ -53,7 +53,9 @@ const deleteBlog = async (req, res) => {
 
 const getAllBlogs = async (req, res) => {
     try {
-        const blogData = await blogModel.find({})
+        const blogData = await blogModel.find()
+      .sort({ createdAt: -1 }) // newest first
+      .limit(10);  
         if (blogData) {
             res.json({ success: true, blogData })
         }
