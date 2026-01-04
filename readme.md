@@ -41,7 +41,6 @@
 - [Future Improvements](#-future-improvements)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Author](#-author)
 
 <hr/>
 
