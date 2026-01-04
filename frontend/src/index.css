@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Headings ---------- */
+
+#blog h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+@media (min-width: 640px) {
+  #blog h1 {
+    font-size: 2.5rem;
+  }
+}
+
+#blog h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+#blog h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+#blog h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+#blog h5 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #374151;
+}
+
+#blog h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* ---------- Paragraphs ---------- */
+
+#blog p {
+  font-size: 1rem;
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+  color: #374151;
+}
+
+@media (min-width: 640px) {
+  #blog p {
+    font-size: 1.125rem;
+  }
+}
+
+#blog small {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ---------- Links ---------- */
+
+#blog a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+#blog a:hover {
+  color: #1d4ed8;
+}
+
+/* ---------- Lists ---------- */
+
+#blog ul,
+#blog ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  color: #374151;
+}
+
+#blog ul {
+  list-style-type: disc;
+}
+
+#blog ol {
+  list-style-type: decimal;
+}
+
+#blog ul li,
+#blog ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ---------- Blockquote ---------- */
+
+#blog blockquote {
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #e5e7eb;
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* ---------- Code ---------- */
+
+#blog code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+#blog pre {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+
+/* ---------- Images ---------- */
+
+#blog img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+#blog figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: -1.25rem;
+}
+
+/* ---------- Tables ---------- */
+
+#blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+#blog table th,
+#blog table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+#blog table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+/* ---------- Horizontal Rule ---------- */
+
+#blog hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 3rem 0;
+}
