@@ -36,9 +36,8 @@ const Footer = () => {
             Follow for updates and new posts.
           </p>
           <div className="flex gap-4 text-sm">
-            <button className="hover:text-white transition-colors">GitHub</button>
-            <button className="hover:text-white transition-colors">Twitter</button>
-            <button className="hover:text-white transition-colors">LinkedIn</button>
+            <button className="hover:text-white transition-colors"><a href="https://github.com/akashsingh062/ByteBlogs">Github</a></button>
+            <button className="hover:text-white transition-colors"><a href="https://www.linkedin.com/in/akashsingh062/">LinkedIn</a></button>
           </div>
         </div>
       </div>
