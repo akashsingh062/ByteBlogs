@@ -14,15 +14,15 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <ToastContainer
-  position="bottom-center"
-  autoClose={1200}
-  hideProgressBar
-  closeOnClick
-  pauseOnHover
-  draggable
-  theme="dark"
-  limit={2}
-/>
+        position="bottom-center"
+        autoClose={1200}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="dark"
+        limit={2}
+      />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
